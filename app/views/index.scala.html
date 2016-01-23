@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myPerfectWeatherApp">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Your Perfect Weather Locator">
+        <meta name="author" content="Radek Ostrowski">
+
+        <title>My Perfect Weather</title>
+
+        <script src='@routes.Assets.at("js/angular.min.js")'></script>
+        <script src='@routes.Assets.at("js/angular-route.min.js")'></script>
+        <script src='@routes.Assets.at("js/jquery.js")'></script>
+        <script src='@routes.Assets.at("js/bootstrap.min.js")'></script>
+        <script src='@routes.Assets.at("js/bootstrap-slider.js")'></script>
+        <script src='@routes.Assets.at("js/script.js")'></script>
+
+        <link href='@routes.Assets.at("img/favicon.png")' rel="shortcut icon" type="image/png"/>
+
+        <link href='@routes.Assets.at("css/bootstrap-slider.css")' rel="stylesheet" type="text/css">
+        <link href='@routes.Assets.at("css/bootstrap.min.css")' rel="stylesheet" type="text/css">
+        <link href='@routes.Assets.at("css/stylish-portfolio.css")' rel="stylesheet" type="text/css">
+        <link href='@routes.Assets.at("css/fonts.css")' rel="stylesheet" type="text/css" type="text/css">
+        <link href='@routes.Assets.at("font-awesome/css/font-awesome.min.css")' rel="stylesheet" type="text/css">
+        <link href='@routes.Assets.at("font-awesome/css/weather-icons.min.css")' rel="stylesheet" type="text/css">
+
+        <script>
+        // Scrolls to the selected menu item on the page
+            $(function() {
+                $('a[href*=#]:not([href=#])').click(function() {
+
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                        var target = $(this.hash);
+                        console.log(target)
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        console.log(target)
+
+                        if (target.length) {
+                            $('html,body').animate({
+                                scrollTop: target.offset().top
+                            }, 1000);
+                            return false;
+                        }
+                    }
+                });
+            });
+        </script>
+
+        <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                  ga('create', 'UA-71863876-1', 'auto');
+                  ga('send', 'pageview');
+        </script>
+
+    </head>
+    <body>
+        <header id="top" class="header">
+            <div class="text-vertical-center">
+                <h2>My Perfect Weather</h2>
+                <h5>Dissatisfied with the weather?</h5>
+                <h5>You don't have to just wait for it to change!</h5>
+                <br>
+                <a href="#about" class="btn btn-dark btn-lg">Find Your Ideal Spot</a>
+            </div>
+        </header>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>Define Your Perfect Weather below</h2>
+                        <p class="lead">and we will find the best places for you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div data-ng-view></div>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1 text-center">
+                        <hr class="small">
+                        <ul class="list-inline">
+                            <li>
+                                <a href="mailto:radek@@fastdata.eu"><i class="fa fa-envelope fa-fw fa-3x"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://uk.linkedin.com/in/radekostrowski" target="_blank"><i class="fa fa-linkedin fa-fw fa-3x"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/radek1st" target="_blank"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/radek1st" target="_blank"><i class="fa fa-github fa-fw fa-3x"></i></a>
+                            </li>
+                        </ul>
+                        <hr class="small">
+                        <p class="text-muted">Copyright &copy; <a href="http://www.fastdata.eu" target="_blank">Fast Data Ltd</a> 2016</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

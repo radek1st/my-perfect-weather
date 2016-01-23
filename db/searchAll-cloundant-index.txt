@@ -1,0 +1,15 @@
+function (doc) {
+  index("num", doc.num, {"store": true});
+  index("max_temp", doc.max_temp, {"store": true});
+  index("min_temp", doc.min_temp, {"store": true});
+  index("hi", doc.hi, {"store": true});
+  index("wspd", doc.wspd, {"store": true});
+  index("wdir_cardinal", doc.wdir_cardinal, {"store": true});
+  index("icon_code", doc.icon_code, {"store": true});
+  index("precip_type", doc.precip_type, {"store": true});
+  index("pop", doc.pop, {"store": true});
+  index("dow", doc.dow, {"store": true});
+  index("fcst_valid_local", doc.fcst_valid_local, {"store": true});
+  index("city", doc.city, {"store": true});
+  index("airport", doc.airport, {"store": true});
+}

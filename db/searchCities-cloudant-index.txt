@@ -1,0 +1,11 @@
+function (doc) {
+  index("num", doc.num, {"store": true});
+  index("city", doc.city);
+  index("max_temp", doc.max_temp);
+  index("min_temp", doc.min_temp);
+  index("hi", doc.hi);
+  index("wspd", doc.wspd);
+  index("icon_code", doc.icon_code);
+  index("precip_type", doc.precip_type);
+  index("pop", doc.pop);
+}
